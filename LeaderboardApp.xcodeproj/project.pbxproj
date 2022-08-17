@@ -13,6 +13,10 @@
 		42953F2128AC7DD0004133D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42953F1F28AC7DD0004133D6 /* Main.storyboard */; };
 		42953F2328AC7DD2004133D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42953F2228AC7DD2004133D6 /* Assets.xcassets */; };
 		42953F2628AC7DD2004133D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42953F2428AC7DD2004133D6 /* LaunchScreen.storyboard */; };
+		429B05E528AC88B400CEAF84 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429B05E428AC88B400CEAF84 /* MusicModel.swift */; };
+		42C6CABA28ACB5B90081AA4E /* LeaderboardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C6CAB928ACB5B90081AA4E /* LeaderboardListViewController.swift */; };
+		42C6CABD28ACE4F50081AA4E /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C6CABC28ACE4F50081AA4E /* LeaderboardCell.swift */; };
+		42C6CAC028AD06090081AA4E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 42C6CABF28AD06090081AA4E /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		42953F2228AC7DD2004133D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42953F2528AC7DD2004133D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42953F2728AC7DD2004133D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		429B05E428AC88B400CEAF84 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
+		42C6CAB928ACB5B90081AA4E /* LeaderboardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardListViewController.swift; sourceTree = "<group>"; };
+		42C6CABC28ACE4F50081AA4E /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C6CAC028AD06090081AA4E /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +48,7 @@
 		42953F0D28AC7DCF004133D6 = {
 			isa = PBXGroup;
 			children = (
+				42C6CABB28ACB5C00081AA4E /* model */,
 				42953F1828AC7DCF004133D6 /* LeaderboardApp */,
 				42953F1728AC7DCF004133D6 /* Products */,
 			);
@@ -60,11 +69,21 @@
 				42953F1B28AC7DD0004133D6 /* SceneDelegate.swift */,
 				42953F1D28AC7DD0004133D6 /* ViewController.swift */,
 				42953F1F28AC7DD0004133D6 /* Main.storyboard */,
+				42C6CAB928ACB5B90081AA4E /* LeaderboardListViewController.swift */,
+				42C6CABC28ACE4F50081AA4E /* LeaderboardCell.swift */,
 				42953F2228AC7DD2004133D6 /* Assets.xcassets */,
 				42953F2428AC7DD2004133D6 /* LaunchScreen.storyboard */,
 				42953F2728AC7DD2004133D6 /* Info.plist */,
 			);
 			path = LeaderboardApp;
+			sourceTree = "<group>";
+		};
+		42C6CABB28ACB5C00081AA4E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				429B05E428AC88B400CEAF84 /* MusicModel.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +102,9 @@
 			dependencies = (
 			);
 			name = LeaderboardApp;
+			packageProductDependencies = (
+				42C6CABF28AD06090081AA4E /* Kingfisher */,
+			);
 			productName = LeaderboardApp;
 			productReference = 42953F1628AC7DCF004133D6 /* LeaderboardApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 42953F0D28AC7DCF004133D6;
+			packageReferences = (
+				42C6CABE28AD06090081AA4E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 42953F1728AC7DCF004133D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				42953F1E28AC7DD0004133D6 /* ViewController.swift in Sources */,
+				42C6CABD28ACE4F50081AA4E /* LeaderboardCell.swift in Sources */,
+				429B05E528AC88B400CEAF84 /* MusicModel.swift in Sources */,
+				42C6CABA28ACB5B90081AA4E /* LeaderboardListViewController.swift in Sources */,
 				42953F1A28AC7DD0004133D6 /* AppDelegate.swift in Sources */,
 				42953F1C28AC7DD0004133D6 /* SceneDelegate.swift in Sources */,
 			);
@@ -356,6 +384,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		42C6CABE28AD06090081AA4E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		42C6CABF28AD06090081AA4E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42C6CABE28AD06090081AA4E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 42953F0E28AC7DCF004133D6 /* Project object */;
 }
